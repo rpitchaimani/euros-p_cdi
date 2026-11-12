@@ -1,0 +1,927 @@
+{
+ "summary": {
+  "cell": "C8",
+  "rep": "F3",
+  "scope_live": "all",
+  "scope_offline": null,
+  "u_ppm": 942,
+  "q_cap": 1024,
+  "bg_pps": 2000,
+  "deadline_ms": 1000,
+  "trials": 40,
+  "trials_invalid": 0,
+  "ingress": {
+   "sent": 208,
+   "missing_at_ingress": 0,
+   "unmatched_src_events": 0
+  },
+  "s4_write_gap_ms": null,
+  "P_chain": [
+   0.0,
+   0.0,
+   0.19361341827271994
+  ],
+  "chain_trials": 16,
+  "chain_ok": 0,
+  "P_chain_by_family": {
+   "S1": [
+    0.0,
+    0.0,
+    0.19361341827271994
+   ],
+   "S4": [
+    NaN,
+    NaN,
+    NaN
+   ],
+   "S7": [
+    NaN,
+    NaN,
+    NaN
+   ]
+  },
+  "partial_ok": [
+   0.0,
+   0.0,
+   0.3244156195108769
+  ],
+  "benign_alarm_rate": [
+   0.0,
+   0.0,
+   0.19361341827271994
+  ],
+  "benign_trials": 16,
+  "stage_recall": {
+   "1": [
+    0.0,
+    0.0,
+    0.19361341827271994
+   ],
+   "2": [
+    0.0,
+    0.0,
+    0.19361341827271994
+   ],
+   "3": [
+    0.0,
+    0.0,
+    0.19361341827271994
+   ],
+   "4": [
+    0.0,
+    0.0,
+    0.19361341827271994
+   ],
+   "5": [
+    0.0,
+    0.0,
+    0.19361341827271994
+   ]
+  },
+  "wrong_links": 0,
+  "over_claims": 0,
+  "mechanisms": {
+   "processing": 16
+  },
+  "mechanisms_detail": {
+   "processing:stage1:late+unprocessed": 16
+  },
+  "latency_ms": {
+   "n": 0,
+   "median": null,
+   "max": null,
+   "deadline_failures": 16
+  },
+  "pipeline": {
+   "reference": 808,
+   "delivered": 808,
+   "admitted": 808,
+   "processed": 80,
+   "unprocessed": 728
+  },
+  "sampling": {
+   "windows": 776,
+   "arrivals_max_per_window": 225,
+   "arrivals_mean": 195.52963917525773,
+   "w_mean_us": 2.9316359406860966,
+   "w_max_us": 7.9750000000000005,
+   "m_measured_mean": 0.19603745615725351,
+   "m_measured_min": 0.14222222222222222,
+   "k_cpu_wcet": 11,
+   "m_pred_wcet": 0.04888888888888889
+  },
+  "forwarding": {
+   "diag_sent": 128,
+   "acked_without_response": 0,
+   "fwd_latency_ms_median": 0.311425,
+   "fwd_latency_ms_p95": 0.3135,
+   "fwd_latency_ms_max": 0.315,
+   "n": 120
+  },
+  "peak": {
+   "trials_with_peak": 40,
+   "dst_events": 312,
+   "matched_in_order": 312
+  },
+  "fano": {
+   "H_phi_bits": 1.721928094887362,
+   "labels": 4,
+   "floor_max": 0.0,
+   "trials_with_zero_available": 0
+  }
+ },
+ "trials": [
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54572961,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 2,
+   "expected": 2,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54798448,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54794850,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54795616,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56352969,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56319768,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54807674,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54814037,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54594492,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 3,
+   "expected": 3,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56341455,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56316790,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54581557,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 2,
+   "expected": 2,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56344636,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54572617,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 2,
+   "expected": 2,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56372219,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54549045,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 2,
+   "expected": 2,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54807901,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56360659,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54596253,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 3,
+   "expected": 3,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56323181,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56373126,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54791045,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56368475,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54611891,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 3,
+   "expected": 3,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54817264,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54786429,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54820701,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54844826,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54828646,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54823081,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56359980,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56355266,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56391945,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56359865,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56360911,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54829311,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54589274,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 3,
+   "expected": 3,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54825836,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56375747,
+   "ref_stages": [],
+   "claim_sessions": 0,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": false,
+   "deadline_t": 54804860,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 0,
+   "per_stage": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": false,
+   "reached": 5,
+   "expected": 5,
+   "mechanism": "processing:stage1:late+unprocessed",
+   "invalid": []
+  }
+ ]
+}

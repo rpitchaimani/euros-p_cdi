@@ -1,0 +1,1 @@
+{"url": "https://services.nvd.nist.gov/rest/json/cves/2.0?virtualMatchString=cpe%3A2.3%3Aa%3Asiemens%3Anucleus_4&noRejected=&resultsPerPage=2000&startIndex=0", "response": {"resultsPerPage": 0, "startIndex": 0, "totalResults": 0, "format": "NVD_CVE", "version": "2.0", "timestamp": "2026-11-05T08:23:47.500", "vulnerabilities": []}}

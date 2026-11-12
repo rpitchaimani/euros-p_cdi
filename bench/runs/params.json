@@ -1,0 +1,17 @@
+{
+ "w_ticks": 118.92333483743201,
+ "w_us": 2.9730833709358,
+ "theta_load": 0.17,
+ "calib_families": "S1,S2,S3",
+ "calib_cells": [
+  "../runs/C1",
+  "../runs/C4",
+  "../runs/C5",
+  "../runs/C6",
+  "../runs/C7",
+  "../runs/C8"
+ ],
+ "rep": "F3",
+ "n_calib": 96,
+ "hash": "10fc6e8f0c899742"
+}

@@ -1,0 +1,1355 @@
+{
+ "summary": {
+  "cell": "C1",
+  "rep": "F3",
+  "scope_live": "all",
+  "scope_offline": null,
+  "u_ppm": 1000000,
+  "q_cap": 1024,
+  "bg_pps": 0,
+  "deadline_ms": 1000,
+  "trials": 60,
+  "trials_invalid": 0,
+  "ingress": {
+   "sent": 312,
+   "missing_at_ingress": 0,
+   "unmatched_src_events": 0
+  },
+  "s4_write_gap_ms": null,
+  "P_chain": [
+   1.0,
+   0.8620194241710247,
+   1.0
+  ],
+  "chain_trials": 24,
+  "chain_ok": 24,
+  "P_chain_by_family": {
+   "S1": [
+    1.0,
+    0.8620194241710247,
+    1.0
+   ],
+   "S4": [
+    NaN,
+    NaN,
+    NaN
+   ],
+   "S7": [
+    NaN,
+    NaN,
+    NaN
+   ]
+  },
+  "partial_ok": [
+   1.0,
+   0.7574992425007574,
+   1.0
+  ],
+  "benign_alarm_rate": [
+   0.0,
+   0.0,
+   0.13798057582897535
+  ],
+  "benign_trials": 24,
+  "stage_recall": {
+   "1": [
+    1.0,
+    0.8620194241710247,
+    1.0
+   ],
+   "2": [
+    1.0,
+    0.8620194241710247,
+    1.0
+   ],
+   "3": [
+    1.0,
+    0.8620194241710247,
+    1.0
+   ],
+   "4": [
+    1.0,
+    0.8620194241710247,
+    1.0
+   ],
+   "5": [
+    1.0,
+    0.8620194241710247,
+    1.0
+   ]
+  },
+  "wrong_links": 0,
+  "over_claims": 0,
+  "mechanisms": {},
+  "mechanisms_detail": {},
+  "latency_ms": {
+   "n": 24,
+   "median": 0.009975,
+   "max": 0.011125,
+   "deadline_failures": 0
+  },
+  "pipeline": {
+   "reference": 1212,
+   "delivered": 1212,
+   "admitted": 1212,
+   "processed": 1212,
+   "on_time": 1212
+  },
+  "sampling": {
+   "windows": 145,
+   "arrivals_max_per_window": 25,
+   "arrivals_mean": 8.786206896551723,
+   "w_mean_us": 3.3110541458101594,
+   "w_max_us": 7.9750000000000005,
+   "m_measured_mean": 1.0,
+   "m_measured_min": 1.0,
+   "k_cpu_wcet": 12539,
+   "m_pred_wcet": 1.0
+  },
+  "forwarding": {
+   "diag_sent": 192,
+   "acked_without_response": 0,
+   "fwd_latency_ms_median": 0.3116,
+   "fwd_latency_ms_p95": 0.31395,
+   "fwd_latency_ms_max": 0.31545,
+   "n": 180
+  },
+  "peak": {
+   "trials_with_peak": 60,
+   "dst_events": 468,
+   "matched_in_order": 468
+  },
+  "fano": {
+   "H_phi_bits": 1.721928094887362,
+   "labels": 4,
+   "floor_max": 0.0,
+   "trials_with_zero_available": 0
+  }
+ },
+ "trials": [
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54588091,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 3,
+   "expected": 3,
+   "t_claim": 14588458,
+   "latency_ms": 0.009175,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56340835,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54821104,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14821503,
+   "latency_ms": 0.009975,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54817372,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14817771,
+   "latency_ms": 0.009975,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54816084,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14816459,
+   "latency_ms": 0.009375,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54813176,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14813543,
+   "latency_ms": 0.009175,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54780147,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14780511,
+   "latency_ms": 0.0091,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56368961,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56378051,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54787644,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14788078,
+   "latency_ms": 0.01085,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56335186,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54585907,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 3,
+   "expected": 3,
+   "t_claim": 14586278,
+   "latency_ms": 0.009275,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54801952,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14802351,
+   "latency_ms": 0.009975,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54803415,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14803754,
+   "latency_ms": 0.008475,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54823809,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14824250,
+   "latency_ms": 0.011025,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54812536,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14812900,
+   "latency_ms": 0.0091,
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54589047,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 3,
+   "expected": 3,
+   "t_claim": 14589484,
+   "latency_ms": 0.010925,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56329624,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54820652,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14821089,
+   "latency_ms": 0.010925,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54547810,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 2,
+   "expected": 2,
+   "t_claim": 13721624,
+   "latency_ms": -20.65465,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56359718,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56330031,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56342795,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56336061,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54560539,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 2,
+   "expected": 2,
+   "t_claim": 13737343,
+   "latency_ms": -20.5799,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54826164,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14826602,
+   "latency_ms": 0.01095,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54833941,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14834330,
+   "latency_ms": 0.009725,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56368261,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56330577,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54597607,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 2,
+   "expected": 2,
+   "t_claim": 13763711,
+   "latency_ms": -20.8474,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56369819,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54573485,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 2,
+   "expected": 2,
+   "t_claim": 13753540,
+   "latency_ms": -20.498625,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56350093,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54781095,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14781508,
+   "latency_ms": 0.010325,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56378533,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54803187,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14803632,
+   "latency_ms": 0.011125,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54836262,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14836700,
+   "latency_ms": 0.01095,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56369154,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54821090,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14821520,
+   "latency_ms": 0.01075,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56350054,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54596914,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 3,
+   "expected": 3,
+   "t_claim": 14597359,
+   "latency_ms": 0.011125,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56377547,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54788746,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14789089,
+   "latency_ms": 0.008575,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56366476,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54809357,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14809756,
+   "latency_ms": 0.009975,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54811300,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14811699,
+   "latency_ms": 0.009975,
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54598833,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 3,
+   "expected": 3,
+   "t_claim": 14599274,
+   "latency_ms": 0.011025,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56346302,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54583247,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 2,
+   "expected": 2,
+   "t_claim": 13746695,
+   "latency_ms": -20.9138,
+   "invalid": []
+  },
+  {
+   "scenario": "S2",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54620491,
+   "ref_stages": [
+    1,
+    2,
+    3
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 3,
+   "expected": 3,
+   "t_claim": 14620904,
+   "latency_ms": 0.010325,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56358682,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S3",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54605357,
+   "ref_stages": [
+    1,
+    2
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 2,
+   "expected": 2,
+   "t_claim": 13775535,
+   "latency_ms": -20.74555,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54809046,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14809484,
+   "latency_ms": 0.01095,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54801735,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14802179,
+   "latency_ms": 0.0111,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54812571,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14812945,
+   "latency_ms": 0.00935,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56354593,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56324952,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56345462,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S6",
+   "malicious": false,
+   "alarm": false,
+   "deadline_t": 56351261,
+   "ref_stages": [],
+   "claim_sessions": 1,
+   "false_alarm": false,
+   "invalid": []
+  },
+  {
+   "scenario": "S1",
+   "malicious": true,
+   "alarm": true,
+   "deadline_t": 54845642,
+   "ref_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_sessions": 1,
+   "per_stage": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+   },
+   "over_claim": [],
+   "wrong_link": [],
+   "complete": true,
+   "reached": 5,
+   "expected": 5,
+   "t_claim": 14846055,
+   "latency_ms": 0.010325,
+   "invalid": []
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "gw": "192.168.10.1",
+ "bind": "192.168.10.100",
+ "cmd": "cell",
+ "name": "C3",
+ "scope": "gw",
+ "u_ppm": 1000000,
+ "q_cap": 1024,
+ "bg_pps": 0,
+ "mix": "LOW",
+ "trials": 30,
+ "hours": 8.0,
+ "seed": 1,
+ "deadline_ms": 1000,
+ "impact_ms": 5,
+ "impact_src": "on",
+ "jitter_ms": 0,
+ "same_value": false,
+ "overlap_ms": 15.0,
+ "pre_ms": 300,
+ "settle_ms": 1500,
+ "gap_ms": 200,
+ "peak": "PCAN_USBBUS1",
+ "no_peak": false,
+ "out": "runs",
+ "overwrite": false,
+ "mix_norm": [
+  [
+   "S1",
+   0.4
+  ],
+  [
+   "S2",
+   0.1
+  ],
+  [
+   "S3",
+   0.1
+  ],
+  [
+   "S6",
+   0.4
+  ]
+ ],
+ "plan": [
+  "S6",
+  "S3",
+  "S1",
+  "S1",
+  "S6",
+  "S1",
+  "S1",
+  "S6",
+  "S1",
+  "S6",
+  "S1",
+  "S6",
+  "S3",
+  "S2",
+  "S1",
+  "S6",
+  "S6",
+  "S1",
+  "S2",
+  "S6",
+  "S2",
+  "S3",
+  "S1",
+  "S1",
+  "S1",
+  "S6",
+  "S6",
+  "S6",
+  "S6",
+  "S1"
+ ],
+ "obs_mask": 4,
+ "created": "2026-11-10 14:46:04"
+}

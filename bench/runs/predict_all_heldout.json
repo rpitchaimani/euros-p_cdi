@@ -1,0 +1,102 @@
+{
+ "params": {
+  "w_ticks": 118.92333483743201,
+  "w_us": 2.9730833709358,
+  "theta_load": 0.17,
+  "calib_families": "S1,S2,S3",
+  "calib_cells": [
+   "../runs/C1",
+   "../runs/C4",
+   "../runs/C5",
+   "../runs/C6",
+   "../runs/C7",
+   "../runs/C8"
+  ],
+  "rep": "F3",
+  "n_calib": 96,
+  "hash": "10fc6e8f0c899742"
+ },
+ "models": {
+  "full": {
+   "accuracy": 0.95,
+   "brier": 0.028846153846153848
+  },
+  "coverage": {
+   "accuracy": 0.8730769230769231,
+   "brier": 0.12692307692307692
+  },
+  "load": {
+   "accuracy": 0.95,
+   "brier": 0.05
+  },
+  "no_xzone": {
+   "accuracy": 0.95,
+   "brier": 0.05
+  }
+ },
+ "per_condition": {
+  "C2/S4": {
+   "observed": 1.0,
+   "full": 1.0,
+   "coverage": 1.0,
+   "load": 1.0,
+   "no_xzone": 1.0
+  },
+  "C2b/S4": {
+   "observed": 1.0,
+   "full": 1.0,
+   "coverage": 1.0,
+   "load": 1.0,
+   "no_xzone": 1.0
+  },
+  "C2c/S4": {
+   "observed": 1.0,
+   "full": 1.0,
+   "coverage": 1.0,
+   "load": 1.0,
+   "no_xzone": 1.0
+  },
+  "C10/S7": {
+   "observed": 1.0,
+   "full": 1.0,
+   "coverage": 1.0,
+   "load": 1.0,
+   "no_xzone": 1.0
+  },
+  "C11/S7": {
+   "observed": 1.0,
+   "full": 1.0,
+   "coverage": 1.0,
+   "load": 1.0,
+   "no_xzone": 1.0
+  },
+  "C12/S7": {
+   "observed": 0.5666666666666667,
+   "full": 0.5,
+   "coverage": 1.0,
+   "load": 1.0,
+   "no_xzone": 1.0
+  },
+  "C13a/S7": {
+   "observed": 1.0,
+   "full": 1.0,
+   "coverage": 1.0,
+   "load": 1.0,
+   "no_xzone": 1.0
+  },
+  "C13b/S7": {
+   "observed": 1.0,
+   "full": 1.0,
+   "coverage": 1.0,
+   "load": 1.0,
+   "no_xzone": 1.0
+  },
+  "C14/S4": {
+   "observed": 0.0,
+   "full": 0.0,
+   "coverage": 1.0,
+   "load": 0.0,
+   "no_xzone": 0.0
+  }
+ }
+}

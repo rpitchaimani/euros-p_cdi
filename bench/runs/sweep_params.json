@@ -1,0 +1,11 @@
+{
+ "frozen": "2026-11-10, before C5-C8 ran",
+ "source_cell": "C4",
+ "n_max_arrivals_per_window": 225,
+ "w_best_us": 1.675,
+ "T_w_ms": 100,
+ "U_star_ppm": 3770,
+ "rule": "U* = n_max * w_best / T_w (Def. def:sampling, best-case w)",
+ "cells": {"C5": 7540, "C6": 3770, "C7": 1885, "C8": 942},
+ "measured_busy_ppm_C4": {"mean": 5878, "p99": 6815, "max": 6837}
+}

@@ -1,0 +1,12 @@
+{
+ "frozen": "2026-11-10, before C9-C14 ran",
+ "note": "Runbook U values 1800/900 were written for the dev U* (3600). Mapped to the frozen U* = 3770 (sweep_params.json): 1800 -> U*/2 = 1885, 900 -> U*/4 = 942; C13 also at U* = 3770.",
+ "C9": "--scope all --bg-pps 2000 --u-ppm 20 --mix LOW --trials 20",
+ "C10": "--mix S7:1 --impact-src on  --jitter-ms 20 --overlap-ms 2 --trials 30",
+ "C11": "--mix S7:1 --impact-src off --jitter-ms 20 --overlap-ms 2 --trials 30",
+ "C12": "--mix S7:1 --impact-src off --jitter-ms 20 --overlap-ms 2 --same-value --trials 30",
+ "C13a": "C10 + --bg-pps 2000 --u-ppm 3770",
+ "C13b": "C10 + --bg-pps 2000 --u-ppm 1885",
+ "C14": "--mix S4:1 --bg-pps 2000 --u-ppm 942 --trials 20",
+ "E7": "--mix S1:1 --bg-pps 2000 --u-ppm 1885 --trials 20, scope gw / dst / all (cells E7_gw, E7_dst, E7_all); runbook 1800 -> U*/2"
+}
