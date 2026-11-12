@@ -127,6 +127,7 @@
 #define OBS_MAX   4u
 
 #define EVF_BG    0x01u  /* background traffic (counted, not logged)  */
+#define EVF_FORGED 0x02u /* report written by a compromised observer   */
 
 typedef struct {
     uint32_t seq;      /* core-1 event sequence number (all observers) */
@@ -145,6 +146,7 @@ typedef struct {
 #define DLV_DELIVERED   1u
 #define DLV_MASKED      2u   /* observer not in this trial's scope      */
 #define DLV_RINGFULL    3u   /* observation interface overflow          */
+#define DLV_FORGED_OUT  4u   /* genuine report replaced by a forgery    */
 
 /* ---------------------------------------------------------------- */
 /* 0x2200  CAN queues between gateway (core 1) and target (core 2)   */

@@ -84,6 +84,17 @@ parameters were frozen before scoring (`runs/heldout_params.json`, `runs/params.
 | C14 | all | S4 | U*/4, 2000 pps | 20 |
 | E7_gw, E7_dst, E7_all | gw, dst, all | S1 | U*/2, 2000 pps | 3 x 20 |
 | B0 (`runs/B0.zip`) | all | S5, S6 (benign only) | full, 500 pps | 8727 (5.3 h) |
+| FX100, FX075, FX050, FX025, FX000 | all (scored offline per scope) | S1, gw observer forged at random, alpha = 1, 0.75, 0.5, 0.25, 0 | full, none | 5 x 30 |
+| FA | all (scored offline per scope) | S1, gw observer forged after the attacker's write | full, none | 30 |
+
+The forgery cells (12 November 2026, parameters frozen in `runs/forgery_params.json`) emulate a
+compromised gw observer in firmware (`src/observers.c`, modes `FORGE_EXO` and `FORGE_ATTACK`,
+set per trial by `run_bench.py --forge exo|attack --forge-alpha A`). A replaced genuine report
+stays in the delivery log with status `forged_out`; the forgery is delivered and flagged. The
+reference chain uses genuine reports only, and a forgery stands in for the report it replaced
+when claims are scored. Summary: `python forgery_report.py ../runs` (written to
+`runs/forgery_summary.json`). The observers share one chip, so their separation is a design
+choice, not enforced by hardware.
 
 `C1_noswitch` is a copy of C1 run with the PC cabled directly to the board; it gave identical
 results and is not counted. `B0_partial_sleep.zip` is a first B0 attempt that stopped after

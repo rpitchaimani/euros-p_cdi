@@ -1,0 +1,16 @@
+{
+ "frozen": "2026-11-12, before any counted forgery cell ran",
+ "firmware": "observers.c forgery modes (FORGE_EXO, FORGE_ATTACK), START extension 38 bytes",
+ "family": "S1 only, 30 trials per cell, live scope all, U full, no background load",
+ "analysis": "scored offline under scopes all, gw+dst, src+dst and formats F1-F4; a forgery stands in for the report it replaced",
+ "cells": {
+  "FX100": "--forge exo --forge-alpha 1.0",
+  "FX075": "--forge exo --forge-alpha 0.75",
+  "FX050": "--forge exo --forge-alpha 0.5",
+  "FX025": "--forge exo --forge-alpha 0.25",
+  "FX000": "--forge exo --forge-alpha 0.0",
+  "FA": "--forge attack"
+ },
+ "prediction_exo": "under gw+dst the steps before the CAN request are seen only by gw, so a trial can succeed only if every window holding the attacker's gw reports is genuine (Corollary coverage applied per window); P_chain should fall with alpha and be 0 at alpha = 0",
+ "prediction_attack": "outside Theorem 1 (forgery caused by the attack): formats that trust the gw verdict (F3) should fail; formats that keep the raw request (F1, F2) need not"
+}

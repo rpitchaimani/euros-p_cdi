@@ -85,6 +85,7 @@ def events_of(trial: dict) -> list[dict]:
         e["t_proc"] = dt(t0, r["t_proc"]) if (r and r["status"] == 1) else None
         e["t_ing"] = dt(t0, r["t_ing"]) if r else None
         e["dlv"] = bp.DLV.get(e["status"], "?")
+        e["forged"] = bool(e.get("flags", 0) & bp.EVF_FORGED)   # written by a compromised observer
         out.append(e)
     out.sort(key=lambda e: e["seq"])
     return out
@@ -109,6 +110,9 @@ def can_data(e) -> bytes:
 # ---------------------------------------------------------------- #
 def reference(trial: dict, evs: list[dict]) -> dict:
     gt = trial["gt"]
+    # Ground truth is built from genuine observations only: a forged report
+    # (written by a compromised observer) is never part of the reference.
+    evs = [e for e in evs if not e.get("forged")]
     ports = {s["port"]: s for s in gt["sessions"]}
     mal = [s for s in gt["sessions"] if s["role"] == "malicious"]
     ref = {"malicious": bool(mal), "scenario": gt["scenario"], "stages": {}, "key": None}
@@ -429,6 +433,16 @@ def score_trial(trial: dict, rep: str, deadline_ms: int, scope_mask: int | None)
         res["f4_unattributable"] = n_sess > 1
     else:
         mine = claims.get(key, {})
+    mine_raw = mine
+    # A forgery stands in for the genuine report it replaced: the firmware logs the
+    # replaced report (forged_out) and its forgery as consecutive sequence numbers.
+    # Scoring asks whether the correlator's conclusion is right, so a claim that
+    # cites the forgery is checked as if it cited the replaced report.
+    by_seq = {e["seq"]: e for e in evs}
+    stand_in = {e["seq"]: e["seq"] - 1 for e in evs
+                if e.get("forged") and by_seq.get(e["seq"] - 1, {}).get("dlv") == "forged_out"}
+    if stand_in:
+        mine = {s: [stand_in.get(q, q) for q in v] for s, v in mine.items()}
     # stage correctness: claimed evidence must include a reference event of that stage
     per = {}
     for s in range(1, 6):
@@ -442,7 +456,7 @@ def score_trial(trial: dict, rep: str, deadline_ms: int, scope_mask: int | None)
                complete=all(per.get(s, False) for s in S) and not over and bool(S),
                reached=max(S) if S else 0, expected=exp)
     if res["complete"]:
-        used = [e for e in avail if any(e["seq"] in v for v in mine.values())]
+        used = [e for e in avail if any(e["seq"] in v for v in mine_raw.values())]
         res["t_claim"] = max(e["t_proc"] for e in used)
         res["latency_ms"] = (res["t_claim"] - ref["t_end"]) / TICKS_MS
     else:
@@ -456,11 +470,20 @@ def mechanism(S: dict, per: dict, evs: list[dict], deadline: int, scope_mask) ->
         if per.get(s):
             continue
         es = [by[q] for q in S[s] if q in by]
+        if any(e["dlv"] == "forged_out" for e in es) and not (
+                scope_mask is not None and all(not scope_mask & (1 << e["obs"]) for e in es if e["dlv"] == "forged_out")):
+            # part of this stage's genuine evidence was replaced by a forgery
+            # that the IDS received in its place
+            return f"forgery:stage{s}"
         def delivered(e):
             return e["dlv"] == "delivered" and (scope_mask is None or scope_mask & (1 << e["obs"]))
         if not any(delivered(e) for e in es):
             why = Counter("scope" if (e["dlv"] == "masked" or (scope_mask is not None and not scope_mask & (1 << e["obs"])))
                           else e["dlv"] for e in es)
+            if "forged_out" in why:
+                # the stage's genuine evidence reached the observer but was
+                # replaced by a forgery before delivery
+                return f"forgery:stage{s}:{'+'.join(sorted(why))}"
             return f"insufficiency:stage{s}:{'+'.join(sorted(why))}"
         if not any(delivered(e) and e["t_proc"] is not None and e["t_proc"] <= deadline for e in es):
             kinds = Counter("admit_drop" if e["ids_status"] == "admit_drop" else
@@ -548,6 +571,9 @@ def pipeline_stats(trials_evs):
     for evs, deadline in trials_evs:
         for e in evs:
             if e["obs"] == bp.OBS_DST and e.get("can_id") == bp.CANID_SYNC:
+                continue
+            if e.get("forged"):
+                c["forged_delivered"] += 1
                 continue
             c["reference"] += 1
             if e["dlv"] != "delivered":

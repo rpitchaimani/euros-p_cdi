@@ -49,6 +49,7 @@ python analyze.py ../runs/C12 --rep F3             # link in no report: 17/30 = 
 python analyze.py ../runs/C2 --rep F4              # aggregated alerts lose the link: 0/30
 python predict.py test --cells ../runs/C2 ../runs/C10 ../runs/C11 ../runs/C12 \
        ../runs/C13a ../runs/C13b ../runs/C14 --families S4,S7 --params ../runs/params.json
+python forgery_report.py ../runs                   # forged gw observer: P_chain falls with alpha (E5)
 ```
 
 `bench/runs/<cell>_F3.json` holds the analysis summary of each cell as reported in the paper.

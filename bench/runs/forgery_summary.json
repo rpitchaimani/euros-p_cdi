@@ -1,0 +1,365 @@
+{
+ "exo": {
+  "FX100": {
+   "alpha": 1.0,
+   "gw+dst": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 30,
+    "success_despite_forged_gw": 0
+   },
+   "all": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 30,
+    "success_despite_forged_gw": 0
+   },
+   "src+dst": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 30,
+    "success_despite_forged_gw": 0
+   }
+  },
+  "FX075": {
+   "alpha": 0.75,
+   "gw+dst": {
+    "n": 30,
+    "k": 23,
+    "p": 0.7666666666666667,
+    "ci": [
+     0.5907132766967574,
+     0.8820776078949878
+    ],
+    "mech": {
+     "forgery": 7
+    },
+    "cond_holds": 23,
+    "success_despite_forged_gw": 0
+   },
+   "all": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 23,
+    "success_despite_forged_gw": 7
+   },
+   "src+dst": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 23,
+    "success_despite_forged_gw": 7
+   }
+  },
+  "FX050": {
+   "alpha": 0.5,
+   "gw+dst": {
+    "n": 30,
+    "k": 18,
+    "p": 0.6,
+    "ci": [
+     0.42320052498273836,
+     0.7540960567391659
+    ],
+    "mech": {
+     "forgery": 12
+    },
+    "cond_holds": 18,
+    "success_despite_forged_gw": 0
+   },
+   "all": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 18,
+    "success_despite_forged_gw": 12
+   },
+   "src+dst": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 18,
+    "success_despite_forged_gw": 12
+   }
+  },
+  "FX025": {
+   "alpha": 0.25,
+   "gw+dst": {
+    "n": 30,
+    "k": 9,
+    "p": 0.3,
+    "ci": [
+     0.16664562643958933,
+     0.4787612101166018
+    ],
+    "mech": {
+     "forgery": 21
+    },
+    "cond_holds": 9,
+    "success_despite_forged_gw": 0
+   },
+   "all": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 9,
+    "success_despite_forged_gw": 21
+   },
+   "src+dst": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 9,
+    "success_despite_forged_gw": 21
+   }
+  },
+  "FX000": {
+   "alpha": 0.0,
+   "gw+dst": {
+    "n": 30,
+    "k": 0,
+    "p": 0.0,
+    "ci": [
+     0.0,
+     0.113517091390478
+    ],
+    "mech": {
+     "forgery": 30
+    },
+    "cond_holds": 0,
+    "success_despite_forged_gw": 0
+   },
+   "all": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   },
+   "src+dst": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   }
+  }
+ },
+ "attack": {
+  "all": {
+   "F1": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   },
+   "F2": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   },
+   "F3": {
+    "n": 30,
+    "k": 0,
+    "p": 0.0,
+    "ci": [
+     0.0,
+     0.113517091390478
+    ],
+    "mech": {
+     "forgery": 30
+    },
+    "cond_holds": 0,
+    "success_despite_forged_gw": 0
+   },
+   "F4": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   }
+  },
+  "gw+dst": {
+   "F1": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   },
+   "F2": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   },
+   "F3": {
+    "n": 30,
+    "k": 0,
+    "p": 0.0,
+    "ci": [
+     0.0,
+     0.113517091390478
+    ],
+    "mech": {
+     "forgery": 30
+    },
+    "cond_holds": 0,
+    "success_despite_forged_gw": 0
+   },
+   "F4": {
+    "n": 30,
+    "k": 0,
+    "p": 0.0,
+    "ci": [
+     0.0,
+     0.113517091390478
+    ],
+    "mech": {
+     "forgery": 30
+    },
+    "cond_holds": 0,
+    "success_despite_forged_gw": 0
+   }
+  },
+  "src+dst": {
+   "F1": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   },
+   "F2": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   },
+   "F3": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   },
+   "F4": {
+    "n": 30,
+    "k": 30,
+    "p": 1.0,
+    "ci": [
+     0.8864829086095221,
+     1.0
+    ],
+    "mech": {},
+    "cond_holds": 0,
+    "success_despite_forged_gw": 30
+   }
+  }
+ }
+}

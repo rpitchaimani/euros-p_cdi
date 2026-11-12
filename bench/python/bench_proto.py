@@ -56,8 +56,13 @@ SCOPES = {
     "gw": mask_of(OBS_GW),
     "dst": mask_of(OBS_DST),
     "src+dst": mask_of(OBS_SRC, OBS_DST),
+    "gw+dst": mask_of(OBS_GW, OBS_DST),
     "all": MASK_ALL,
 }
+
+# forgery experiment (observers.h): gw-observer compromise modes
+FORGE = {"none": 0, "exo": 1, "attack": 2}
+EVF_FORGED = 0x02
 
 STM_HZ = 40_000_000           # measured on the DEVKIT: 40.000 MHz (prescaler 2)
 BUILD_FLAG_CAN_INTERNAL_LOOPBACK = 0x1
@@ -70,7 +75,7 @@ OFF_DLOG, DLOG_SLOTS, DLOG_REC = 0x8400, 512, 32
 OFF_WLOG, WLOG_SLOTS, WLOG_REC = 0xC400, 1024, 12
 OFF_IMPLOG_N, OFF_IMPLOG, IMPLOG_SLOTS, IMPLOG_REC = 0xF400, 0xF410, 64, 8
 
-DLV = {1: "delivered", 2: "masked", 3: "ringfull"}
+DLV = {1: "delivered", 2: "masked", 3: "ringfull", 4: "forged_out"}
 IDS_ST = {1: "processed", 2: "unprocessed", 3: "admit_drop"}
 
 CTL_FIELDS = {  # name: offset (all uint32 big-endian)
@@ -198,11 +203,13 @@ class Ctl:
 
     def start(self, trial_id: int, u_ppm: int, obs_mask: int, q_cap: int,
               deadline_ms: int, impact_ms: int, flags: int = CFGF_IMPACT_SRC,
-              jitter_ms: int = 0, seed: int = 0) -> StartReply:
+              jitter_ms: int = 0, seed: int = 0, forge_mode: int = 0,
+              forge_alpha_ppm: int = 1_000_000) -> StartReply:
         t_ns = time.perf_counter_ns()
-        msg = b"S" + struct.pack(">IIBHIHQBHI", trial_id, u_ppm, obs_mask, q_cap,
-                                 deadline_ms, impact_ms, t_ns, flags, jitter_ms, seed)
-        assert len(msg) == 33
+        msg = b"S" + struct.pack(">IIBHIHQBHIBI", trial_id, u_ppm, obs_mask, q_cap,
+                                 deadline_ms, impact_ms, t_ns, flags, jitter_ms, seed,
+                                 forge_mode, forge_alpha_ppm)
+        assert len(msg) == 38
         r = self._xfer(msg, b"A", retries=1)
         t_r = time.perf_counter_ns()
         seq, t0, tsync = struct.unpack_from(">III", r, 2)

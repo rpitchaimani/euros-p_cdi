@@ -17,6 +17,22 @@
 #include "shared_mem.h"
 
 void obs_trial_reset(void);                 /* core 1, on START          */
+
+/* Emulated compromise of the gw observer (forgery experiment).
+ *   FORGE_NONE    genuine reports only
+ *   FORGE_EXO     in each T_w window, independently of the attack, the gw
+ *                 observer is genuine with probability alpha (ppm); in other
+ *                 windows each of its reports is replaced by a fixed benign
+ *                 template from a fake session (Assumption 1(iii))
+ *   FORGE_ATTACK  once the attacker's unauthorised write passes the gateway,
+ *                 the gw observer reports that write and every later decision
+ *                 as allowed and authenticated (forgery caused by the attack)
+ * Replaced genuine reports stay in the delivery log as DLV_FORGED_OUT; the
+ * forgeries are delivered and logged with EVF_FORGED. */
+#define FORGE_NONE    0u
+#define FORGE_EXO     1u
+#define FORGE_ATTACK  2u
+void obs_set_forge(uint8_t mode, uint32_t alpha_ppm, uint32_t seed);
 void obs_eth_frame(const uint8_t *frame, uint16_t len);
 void obs_gw_event(uint8_t kind, const uint8_t d[20]);
 void obs_can_frame(uint32_t id, uint8_t dlc, const uint8_t data[8]);

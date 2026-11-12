@@ -168,7 +168,9 @@ def one_trial(ctl: bp.Ctl, peak: PeakBus, args, trial_id: int, scen: str, rng: r
     st = ctl.start(trial_id, args.u_ppm, bp.SCOPES[args.scope], args.q_cap,
                    args.deadline_ms, args.impact_ms,
                    flags=bp.CFGF_IMPACT_SRC if args.impact_src == "on" else 0,
-                   jitter_ms=args.jitter_ms, seed=trial_id & 0xFFFFFFFF or 1)
+                   jitter_ms=args.jitter_ms, seed=trial_id & 0xFFFFFFFF or 1,
+                   forge_mode=bp.FORGE[args.forge],
+                   forge_alpha_ppm=int(round(args.forge_alpha * 1_000_000)))
     if not st.ok:
         print("  ! START: a core did not acknowledge (continuing, flagged)")
     bg.start()
@@ -279,6 +281,10 @@ def main(argv=None):
         c.add_argument("--pre-ms", type=int, default=300)
         c.add_argument("--settle-ms", type=int, default=1500)
         c.add_argument("--gap-ms", type=int, default=200)
+        c.add_argument("--forge", choices=sorted(bp.FORGE), default="none",
+                       help="emulated compromise of the gw observer: exo (independent of the attack) or attack")
+        c.add_argument("--forge-alpha", type=float, default=1.0,
+                       help="exo: probability that the gw observer is genuine in a window")
         c.add_argument("--peak", default=None, help="PCAN channel, e.g. PCAN_USBBUS1 (required)")
         c.add_argument("--no-peak", action="store_true", help="fake board only")
         c.add_argument("--out", default=os.path.join(HERE, "..", "runs"))

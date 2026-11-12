@@ -362,6 +362,13 @@ static void handle_ctrl(const uint8_t *b, uint16_t len, const ip_addr_t *a, uint
         } else {
             SHM_CFG_FLAGS = CFGF_IMPACT_SRC; SHM_CFG_JITTER_MS = 0u; SHM_CFG_SEED = 0u;
         }
+        /* optional extension (38 bytes): gw-observer forgery mode and alpha.
+           The forgery seed is derived from the trial seed but differs from the
+           target's PRNG, so forged windows do not depend on the attack. */
+        if (len >= 38u)
+            obs_set_forge(b[33], get32(&b[34]), SHM_CFG_SEED ^ 0xC0FFEE11u);
+        else
+            obs_set_forge(FORGE_NONE, 1000000u, 0u);
         MSYNC();
         SHM_TRIAL_SEQ++;
         MSYNC();
